@@ -7,5 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pieter Heyvaert <pheyvaer.heyvaert@ugent.be>",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "n3": "^0.11.0",
+    "prefix-ns": "^0.1.2",
+    "q": "^1.5.0"
+  }
 }

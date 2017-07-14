@@ -1,0 +1,27 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix tio: <http://purl.org/tio/ns#> .
+@prefix transit: <http://vocab.org/transit/terms/> .
+
+@base <http://example.com/> .
+
+<#AirportMapping> a rr:TriplesMap;
+  rr:subjectMap <#SubjectMap>;
+  rr:predicateObjectMap <#PredicateObjectMap>.
+
+<#SubjectMap> a rr:SubjectMap;
+  rr:template "http://airport.example.com/{id}";
+  rr:class tio:Stop.
+
+<#PredicateObjectMap> a rr:PredicateObjectMap;
+  rr:predicateMap <#PredicateMap>;
+  rr:objectMap <#ObjectMap>.
+
+<#PredicateMap> a rr:PredicateMap;
+  rr:constant transit:toStop.
+
+<#ObjectMap> a rr:ObjectMap;
+  rml:reference "stop";
+  rr:datatype xsd:int.

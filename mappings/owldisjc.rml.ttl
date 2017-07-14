@@ -5,9 +5,11 @@
 @prefix ex: <http://www.example.com/> .
 @prefix transit: <http://vocab.org/transit/terms/> .
 
+@base <http://example.com/> .
+
 <#AirportMapping> a rr:TriplesMap;
   rr:subjectMap <#SubjectMap>.
 
 <#SubjectMap> a rr:SubjectMap;
   rr:template "http://airport.example.com/{id}";
-      rr:class transit:Stop, ex:Stop.
+  rr:class <http://purl.org/tio/ns#SeatOrSeatCategory>, <http://purl.org/tio/ns#SeatingLayout>.

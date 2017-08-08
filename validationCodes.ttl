@@ -50,29 +50,29 @@
 :duplicateLanguageCode a rlog:StatusCode;
     rdfs:label "Duplicate Language Tag";
     rdfs:comment "A literal value should contain at most one literal for a certain language. (ONELANG)";
-    rlog:codeId 110.
+    rlog:codeId "110".
 
 :disjointPredicate a rlog:StatusCode;
     rdfs:label "Disjoint Predicates";
     rdfs:comment "Disjoint property constraint. (OWLDISJP)";
-    rlog:codeId 111.
+    rlog:codeId "111".
 
 :asymmetricPredicate a rlog:StatusCode;
     rdfs:label "Asymmetric Predicates";
     rdfs:comment "Asymmetric property constraint. (OWL-ASYMP)";
-    rlog:codeId 112.
+    rlog:codeId "112".
 
 :irreflexivePredicate a rlog:StatusCode;
     rdfs:label "Irreflexive Predicates";
     rdfs:comment "Irreflexive property constraint. (OWL-IRREFL)";
-    rlog:codeId 113.
+    rlog:codeId "113".
 
 :typeDependency a rlog:StatusCode;
     rdfs:label "Type Dependency";
     rdfs:comment "Type dependency:  The type of a resource may imply the attribution of another type. (TYPEDEP)";
-    rlog:codeId 114.
+    rlog:codeId "114".
 
 :typePropertyDependency a rlog:StatusCode;
     rdfs:label "Type Property Dependency";
     rdfs:comment "A resource of a specific type should have a certain property. (TYPRO-DEP)";
-    rlog:codeId 115.
+    rlog:codeId "115".

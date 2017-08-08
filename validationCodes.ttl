@@ -61,3 +61,8 @@
     rdfs:label "Asymmetric Predicates";
     rdfs:comment "Asymmetric property constraint. (OWL-ASYMP)";
     rlog:codeId 112.
+
+:irreflexivePredicate a rlog:StatusCode;
+    rdfs:label "Irreflexive Predicates";
+    rdfs:comment "Irreflexive property constraint. (OWL-IRREFL)";
+    rlog:codeId 113.

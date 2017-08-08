@@ -66,3 +66,8 @@
     rdfs:label "Irreflexive Predicates";
     rdfs:comment "Irreflexive property constraint. (OWL-IRREFL)";
     rlog:codeId 113.
+
+:typeDependency a rlog:StatusCode;
+    rdfs:label "Type Dependency";
+    rdfs:comment "Type dependency:  The type of a resource may imply the attribution of another type.. (TYPEDEP)";
+    rlog:codeId 114.

@@ -51,3 +51,8 @@
     rdfs:label "Duplicate Language Tag";
     rdfs:comment "A literal value should contain at most one literal for a certain language. (ONELANG)";
     rlog:codeId 110.
+
+:disjointPredicate a rlog:StatusCode;
+    rdfs:label "Disjoint Predicates";
+    rdfs:comment "Disjoint property constraint. (OWLDISJP)";
+    rlog:codeId 111.

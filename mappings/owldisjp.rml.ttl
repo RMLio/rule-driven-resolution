@@ -4,14 +4,19 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://www.example.com/> .
 @prefix transit: <http://vocab.org/transit/terms/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
 
 @base <http://example.com/> .
 
+ex:test owl:propertyDisjointWith ex:test2 .
+
 <#AirportMapping> a rr:TriplesMap;
-  rr:subjectMap <#SubjectMap>.
+  rr:subjectMap <#SubjectMap>;
+  rr:predicateObjectMap <#POM1>, <#POM2>.
 
 <#SubjectMap> a rr:SubjectMap;
-  rr:template "http://airport.example.com/{id}".
+  rr:template "http://airport.example.com/{id}";
+  rr:class <http://purl.org/tio/ns#SeatOrSeatCategory>.
 
 <#POM1> a rr:PredicateObjectMap;
   rr:predicate ex:test;

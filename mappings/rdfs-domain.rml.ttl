@@ -23,5 +23,4 @@
   rr:constant transit:toStop.
 
 <#ObjectMap> a rr:ObjectMap;
-  rml:reference "stop";
-  rr:datatype xsd:int.
+  rml:reference "stop".

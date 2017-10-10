@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha $(find . -name '*.test.js')"
   },
   "author": "Pieter Heyvaert <pheyvaer.heyvaert@ugent.be>",
   "license": "UNLICENSED",
   "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
     "n3": "^0.11.0",
     "prefix-ns": "^0.1.2",
     "q": "^1.5.0",

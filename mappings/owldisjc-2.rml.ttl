@@ -9,7 +9,8 @@
 @base <http://example.com/> .
 
 <#AirportMapping> a rr:TriplesMap;
-  rr:subjectMap <#SubjectMap>.
+  rr:subjectMap <#SubjectMap> ;
+  rr:predicateObjectMap <#POM> .
 
 <#SubjectMap> a rr:SubjectMap;
   rr:template "http://airport.example.com/{id}";

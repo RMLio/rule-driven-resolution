@@ -5,7 +5,7 @@
 
 const fs = require('fs');
 const validate = require('./lib/validate.js');
-const Analyzer = require('./lib/analyzer.js');
+const Analyzer = require('./lib/violationanalyzer.js');
 const N3 = require('n3');
 const namespaces = require('prefix-ns').asMap();
 
@@ -23,7 +23,7 @@ validate(mapping).then((store) => {
     } else {
       let analyzer = new Analyzer(store, mappingStore);
       analyzer.analyze();
-      //console.log(analyzer.getEffectsOfSingleChange('http://www.example.com/#ObjectMap1', namespaces.rr + 'datatype'));
+      //console.log(analyzer.getEffects('http://www.example.com/#ObjectMap1', namespaces.rr + 'datatype'));
     }
   });
 });

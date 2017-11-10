@@ -4,12 +4,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix tio: <http://purl.org/tio/ns#> .
 @prefix transit: <http://vocab.org/transit/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 @base <http://example.com/> .
 
 <#AirportMapping> a rr:TriplesMap;
   rr:subjectMap <#SubjectMap>;
-  rr:predicateObjectMap <#PredicateObjectMap>, <#POM2>, <#POM3>, <#POM4>.
+  rr:predicateObjectMap <#PredicateObjectMap>, <#POM2>, <#POM3>, <#POM4>, <#POM5>.
 
 <#SubjectMap> a rr:SubjectMap;
   rr:template "http://airport.example.com/{id}";
@@ -43,7 +44,8 @@
   rml:reference "my-predicate".
 
 <#OM3> a rr:ObjectMap;
-  rr:template "{stop}".
+  rr:template "{stop}";
+  rr:language "en".
 
 <#POM4> a rr:PredicateObjectMap;
   rr:predicateMap <#PM4>;
@@ -53,4 +55,16 @@
   rr:template "http://test.com{my-predicate}".
 
 <#OM4> a rr:ObjectMap;
-  rr:constant "stop".
+  rr:constant "stop";
+  rr:datatype transit:DT.
+
+<#POM5> a rr:PredicateObjectMap;
+  rr:predicateMap <#PM5>;
+  rr:objectMap <#OM5>.
+
+<#PM5> a rr:PredicateMap;
+  rr:constant rdf:type.
+
+<#OM5> a rr:ObjectMap;
+  rr:constant transit:toStop;
+  rr:termType rr:IRI .

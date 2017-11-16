@@ -17,8 +17,11 @@
   rr:class ex:Person .
 
 <#POM3> a rr:PredicateObjectMap;
-  rr:predicate test:child;
+  rr:predicateMap <#PM3> ;
   rr:objectMap <#OM3>.
+
+<#PM3> a rr:PredicateMap;
+  rr:constant test:child .
 
 <#OM3> a rr:ReferencingObjectMap;
   rr:parentTriplesMap <#Parent>.

@@ -17,8 +17,11 @@
   rr:class <http://purl.org/tio/ns#SeatOrSeatCategory>.
 
 <#POM> a rr:PredicateObjectMap;
-  rr:predicate rdf:type;
+  rr:predicateMap <#PM>;
   rr:objectMap <#OM>.
+
+<#PM> a rr:PredicateMap;
+  rr:constant rdf:type.
 
 <#OM> a rr:ObjectMap;
   rr:constant "http://purl.org/tio/ns#SeatingLayout";

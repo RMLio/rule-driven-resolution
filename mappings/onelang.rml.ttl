@@ -16,16 +16,22 @@
   rr:class <http://purl.org/tio/ns#SeatOrSeatCategory>.
 
 <#POM1> a rr:PredicateObjectMap;
-  rr:predicate ex:test;
+  rr:predicateMap <#PM1>;
   rr:objectMap <#OM1>.
+
+<#PM1> a rr:PredicateMap;
+  rr:constant ex:test.
 
 <#OM1> a rr:ObjectMap;
   rml:reference "test";
   rr:language "en".
 
 <#POM2> a rr:PredicateObjectMap;
-  rr:predicate ex:test;
+  rr:predicateMap <#PM2>;
   rr:objectMap <#OM2>.
+
+<#PM2> a rr:PredicateMap;
+  rr:constant ex:test.
 
 <#OM2> a rr:ObjectMap;
   rml:reference "test-2";

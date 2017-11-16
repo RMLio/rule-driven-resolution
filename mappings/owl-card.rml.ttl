@@ -19,16 +19,22 @@
   rr:class foaf:Person.
 
 <#POM1> a rr:PredicateObjectMap;
-  rr:predicate foaf:gender;
+  rr:predicateMap <#PM1>;
   rr:objectMap <#OM1> .
+
+<#PM1> a rr:PredicateMap;
+  rr:constant foaf:gender.
 
 <#OM1> a rr:ObjectMap;
   rr:constant "male" ;
   rr:datatype rdfs:Literal .
 
 <#POM2> a rr:PredicateObjectMap;
-  rr:predicate foaf:gender;
+  rr:predicateMap <#PM2>;
   rr:objectMap <#OM2>.
+
+<#PM2> a rr:PredicateMap;
+  rr:constant foaf:gender.
 
 <#OM2> a rr:ObjectMap;
   rr:constant "female" ;

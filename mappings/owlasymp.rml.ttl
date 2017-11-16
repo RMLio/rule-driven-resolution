@@ -17,8 +17,11 @@
   rr:class ex:Person .
 
 <#POM1> a rr:PredicateObjectMap;
-  rr:predicate test:child;
+  rr:predicateMap <#PM1>;
   rr:objectMap <#OM1>.
+
+<#PM1> a rr:PredicateMap;
+  rr:constant test:child.
 
 <#OM1> a rr:ReferencingObjectMap;
   rr:parentTriplesMap <#Child>.
@@ -32,8 +35,11 @@
   rr:class ex:Person .
 
 <#POM2> a rr:PredicateObjectMap;
-  rr:predicate test:child;
+  rr:predicateMap <#PM2>;
   rr:objectMap <#OM2>.
+
+<#PM2> a rr:PredicateMap;
+  rr:constant test:child.
 
 <#OM2> a rr:ReferencingObjectMap;
   rr:parentTriplesMap <#Parent>.

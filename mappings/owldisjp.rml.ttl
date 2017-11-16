@@ -19,15 +19,21 @@ ex:test owl:propertyDisjointWith ex:test2 .
   rr:class <http://purl.org/tio/ns#SeatOrSeatCategory>.
 
 <#POM1> a rr:PredicateObjectMap;
-  rr:predicate ex:test;
+  rr:predicateMap <#PM3>;
   rr:objectMap <#OM1>.
+
+<#PM3> a rr:PredicateMap;
+  rr:constant ex:test .
 
 <#OM1> a rr:ObjectMap;
   rml:reference "test".
 
 <#POM2> a rr:PredicateObjectMap;
-  rr:predicate ex:test2;
+   rr:predicateMap <#PM2>;
   rr:objectMap <#OM2>.
 
 <#OM2> a rr:ObjectMap;
   rml:reference "test-2".
+
+<#PM2> a rr:PredicateMap;
+  rr:constant ex:test2 .

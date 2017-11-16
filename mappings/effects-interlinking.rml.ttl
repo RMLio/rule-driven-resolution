@@ -10,7 +10,7 @@
 
 <#AirportMapping> a rr:TriplesMap;
   rr:subjectMap <#SubjectMap>;
-  rr:predicateObjectMap <#PredicateObjectMap>, <#POM2>, <#POM3>, <#POM4>, <#POM5>, <#POM6>.
+  rr:predicateObjectMap <#PredicateObjectMap>, <#POM2>, <#POM3>, <#POM4>, <#POM5>, <#POM6>, <#POM8>, <#POM9>, <#POM10>.
 
 <#SubjectMap> a rr:SubjectMap;
   rr:template "http://airport.example.com/{id}".
@@ -78,3 +78,52 @@
 <#OM5> a rr:ObjectMap;
   rr:constant transit:toStop;
   rr:termType rr:IRI .
+
+<#POM8> a rr:PredicateObjectMap;
+  rr:predicateMap <#PM8>;
+  rr:objectMap <#OM8>.
+
+<#PM8> a rr:PredicateMap;
+  rr:constant tio:flying.
+
+<#OM8> a rr:ObjectMap;
+  rr:parentTriplesMap <#Airplanes>.
+
+<#POM9> a rr:PredicateObjectMap;
+  rr:predicateMap <#PM9>;
+  rr:objectMap <#OM9>.
+
+<#PM9> a rr:PredicateMap;
+  rml:reference "flying_predicate".
+
+<#OM9> a rr:ObjectMap;
+  rr:parentTriplesMap <#Airplanes>.
+
+<#POM10> a rr:PredicateObjectMap;
+  rr:predicateMap <#PM10>;
+  rr:objectMap <#OM10>.
+
+<#PM10> a rr:PredicateMap;
+  rr:template "{flying_pred}".
+
+<#OM10> a rr:ObjectMap;
+  rr:parentTriplesMap <#Airplanes>.
+
+<#Airplanes> a rr:TriplesMap;
+  rr:subjectMap <#SM2>;
+  rr:predicateObjectMap <#POM7>.
+
+<#SM2> a rr:SubjectMap;
+  rr:template "http://airplane.example.com/{id}".
+
+<#POM7> a rr:PredicateObjectMap;
+  rr:predicateMap <#PM7>;
+  rr:objectMap <#OM7>.
+
+<#PM7> a rr:PredicateMap;
+  rr:constant rdf:type.
+
+<#OM7> a rr:ObjectMap;
+  rr:constant tio:Airplane;
+  rr:termType rr:IRI.
+

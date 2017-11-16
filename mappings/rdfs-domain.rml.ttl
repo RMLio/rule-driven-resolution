@@ -4,16 +4,27 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix tio: <http://purl.org/tio/ns#> .
 @prefix transit: <http://vocab.org/transit/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 
 @base <http://example.com/> .
 
 <#AirportMapping> a rr:TriplesMap;
   rr:subjectMap <#SubjectMap>;
-  rr:predicateObjectMap <#PredicateObjectMap>.
+  rr:predicateObjectMap <#PredicateObjectMap>, <#POM2>.
 
 <#SubjectMap> a rr:SubjectMap;
-  rr:template "http://airport.example.com/{id}";
-  rr:class tio:Stop.
+  rr:template "http://airport.example.com/{id}".
+
+<#POM2> a rr:PredicateObjectMap;
+  rr:predicateMap <#PM2>;
+  rr:objectMap <#OM2>.
+
+<#PM2> a rr:PredicateMap;
+  rr:constant rdf:type.
+
+<#OM2> a rr:ObjectMap;
+  rr:constant tio:Stop;
+  rr:termType rr:IRI.
 
 <#PredicateObjectMap> a rr:PredicateObjectMap;
   rr:predicateMap <#PredicateMap>;

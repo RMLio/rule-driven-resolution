@@ -1,0 +1,13 @@
+{
+  "codeDatatype": "RDFS-RANGED",
+  "codeDomain": "RDFS-DOMAIN",
+  "codeDisjoint": "OWLDISJC",
+  "codeRange": "RDFS-RANGE",
+  "duplicateLanguageCode": "ONELANG",
+  "codeDisjointPredicate": "OWLDISJP",
+  "asymmetricPredicate": "OWL-ASYMP",
+  "irreflexivePredicate": "OWL-IRREFL",
+  "typeDependency": "TYPEDEP",
+  "typePropertyDependency": "TYPRO-DEP",
+  "cardcode": "OWL-CARD"
+}

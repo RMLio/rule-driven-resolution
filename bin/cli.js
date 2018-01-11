@@ -13,13 +13,14 @@ const validate          = require('../lib/validate');
 const ViolationAnalyzer = require('../lib/violationanalyzer.js');
 const EffectsAnalyzer   = require('../lib/effectsanalyzer.js');
 const N3                = require('n3');
+const Scorer                = require('../lib/scorer.js');
 
 pkginfo(module, 'version');
 
 program.version(module.exports.version);
 program.option('-i, --input <input>', 'input file');
 program.option('-o, --output <output>', 'output file (default: stdout)');
-program.option('-e, --effects', 'output file (default: stdout)');
+program.option('-e, --effects', 'TODO');
 program.parse(process.argv);
 
 if (!program.input) {
@@ -42,14 +43,38 @@ if (!program.input) {
         normalizeRML(mappingStore, () => {
           const violationAnalyzer = new ViolationAnalyzer(store, mappingStore);
           const effectsAnalyzer = new EffectsAnalyzer(mappingStore);
-          const analyzedViolations = violationAnalyzer.analyze();
+          const analyzedViolations = violationAnalyzer.analyze(true);
 
           if (program.effects) {
+            const inconsistencies = [];
+            const effects = {};
+            const termMaps = [];
+
             analyzedViolations.forEach(violation => {
+              const inconsistency = {
+                inconsistency: violation.inconsistency,
+                rules: []};
+
               violation.possibleActions.forEach(action => {
+                inconsistency.rules.push(action.termMap);
                 action.effects = effectsAnalyzer.getEffects(action.termMap, action.element);
+
+                effects[action.termMap] = action.effects;
+                termMaps.push(action.termMap);
               });
+
+              inconsistencies.push(inconsistency);
             });
+
+            console.log(inconsistencies);
+            console.log(effects);
+
+            let scorer = new Scorer(mappingStore, inconsistencies, effects);
+
+            for(let i = 0; i < termMaps.length; i ++) {
+              console.log(termMaps[i]);
+              console.log(scorer.getScore(termMaps[i]));
+            }
           }
 
           const outputStr = JSON.stringify(analyzedViolations, null, 2);

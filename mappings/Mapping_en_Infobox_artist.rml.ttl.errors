@@ -1,0 +1,306 @@
+PREFIX var: <http://eulersharp.sourceforge.net/.well-known/genid/q4pM7pij6qUovJ7uVe1PSEY7bZ8#>
+PREFIX : <http://www.ournicecode.org#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX list: <http://www.w3.org/2000/10/swap/list#>
+PREFIX prolog: <http://eulersharp.sourceforge.net/2003/03swap/prolog#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rutp: <http://rdfunit.aksw.org/data/patterns#>
+PREFIX rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#>
+PREFIX oslc: <http://open-services.net/ns/core#>
+PREFIX rutg: <http://rdfunit.aksw.org/data/generators#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dsp: <http://dublincore.org/dc-dsp#>
+PREFIX schema: <http://schema.org/>
+PREFIX rut: <http://rdfunit.aksw.org/ns/core#>
+PREFIX rutr: <http://rdfunit.aksw.org/data/results#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX spin: <http://spinrdf.org/spin#>
+PREFIX rutt: <http://rdfunit.aksw.org/data/tests#>
+PREFIX ruts: <http://rdfunit.aksw.org/data/testsuite#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX string: <http://www.w3.org/2000/10/swap/string#>
+PREFIX rr: <http://www.w3.org/ns/r2rml#>
+PREFIX grddl: <http://www.w3.org/2003/g/data-view#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX cc: <http://creativecommons.org/ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ql: <http://semweb.mmlab.be/ns/ql#>
+PREFIX rml: <http://semweb.mmlab.be/ns/rml#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcam: <http://purl.org/dc/dcam/>
+PREFIX fno: <http://semweb.mmlab.be/ns/function#>
+PREFIX voaf: <http://purl.org/vocommons/voaf#>
+PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+PREFIX fnml: <http://semweb.mmlab.be/ns/fnml#>
+PREFIX max: <http://maxime-lefrancois.info/me#>
+PREFIX ns1: <https://w3id.org/function/ontology#>
+PREFIX vaem: <http://www.linkedmodel.org/schema/vaem#>
+PREFIX crm: <http://purl.org/NET/cidoc-crm/core#>
+PREFIX label: <http://purl.org/net/vocab/2004/03/label#>
+PREFIX gml: <http://www.opengis.net/gml/>
+PREFIX bio: <http://purl.org/vocab/bio/0.1/>
+PREFIX d0: <http://www.ontologydesignpatterns.org/ont/d0.owl#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX crml: <http://semweb.mmlab.be/ns/crml#>
+PREFIX ns2: <http://w3id.org/function/ontology#>
+PREFIX georss: <http://www.georss.org/georss/>
+PREFIX dbf: <http://dbpedia.org/function/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX mappings: <http://mappings.dbpedia.org/wiki/>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX wikidata: <http://www.wikidata.org/entity/>
+PREFIX cs: <http://vocab.org/changeset/schema#>
+PREFIX ex: <http://www.example.com/>
+PREFIX test: <http://users.ugent.be/~bjdmeest/testontology.ttl#>
+
+:codeDomain rdfs:label "Domain Mismatch".
+:codeNoDatatype rdfs:label "Missing Datatype".
+var:sk_75 rdfs:label "Add a datatype".
+var:sk_78 rdfs:label "Remove the predicate".
+var:sk_124 rdfs:label "Add a datatype".
+var:sk_127 rdfs:label "Remove the predicate".
+var:sk_173 rdfs:label "Add a datatype".
+var:sk_176 rdfs:label "Remove the predicate".
+var:sk_222 rdfs:label "Add a datatype".
+var:sk_225 rdfs:label "Remove the predicate".
+var:sk_271 rdfs:label "Add a datatype".
+var:sk_274 rdfs:label "Remove the predicate".
+var:sk_320 rdfs:label "Add a datatype".
+var:sk_323 rdfs:label "Remove the predicate".
+var:sk_14 a rlog:Entry.
+var:sk_35 a rlog:Entry.
+var:sk_56 a rlog:Entry.
+var:sk_75 a rut:ResultAnnotation.
+var:sk_78 a rut:ResultAnnotation.
+var:sk_105 a rlog:Entry.
+var:sk_124 a rut:ResultAnnotation.
+var:sk_127 a rut:ResultAnnotation.
+var:sk_154 a rlog:Entry.
+var:sk_173 a rut:ResultAnnotation.
+var:sk_176 a rut:ResultAnnotation.
+var:sk_203 a rlog:Entry.
+var:sk_222 a rut:ResultAnnotation.
+var:sk_225 a rut:ResultAnnotation.
+var:sk_252 a rlog:Entry.
+var:sk_271 a rut:ResultAnnotation.
+var:sk_274 a rut:ResultAnnotation.
+var:sk_301 a rlog:Entry.
+var:sk_320 a rut:ResultAnnotation.
+var:sk_323 a rut:ResultAnnotation.
+var:sk_14 rlog:message "the rdfs:domain of the rr:predicate value should be the same (or a superclass) of the rr:class".
+var:sk_35 rlog:message "the rdfs:domain of the rr:predicate value should be the same (or a superclass) of the rr:class".
+var:sk_56 rlog:message "The predicate is defined as a datatype but no rr:datatype exists in the rr:objectMap".
+var:sk_105 rlog:message "The predicate is defined as a datatype but no rr:datatype exists in the rr:objectMap".
+var:sk_154 rlog:message "The predicate is defined as a datatype but no rr:datatype exists in the rr:objectMap".
+var:sk_203 rlog:message "The predicate is defined as a datatype but no rr:datatype exists in the rr:objectMap".
+var:sk_252 rlog:message "The predicate is defined as a datatype but no rr:datatype exists in the rr:objectMap".
+var:sk_301 rlog:message "The predicate is defined as a datatype but no rr:datatype exists in the rr:objectMap".
+var:sk_14 <http://www.example.com/template> "The Entity type $x of the entity does not match the expected Entity type $y of the relation $z.".
+var:sk_35 <http://www.example.com/template> "The Entity type $x of the entity does not match the expected Entity type $y of the relation $z.".
+var:sk_56 <http://www.example.com/template> "The relation $x expects an attribute of the datatype $y.".
+var:sk_75 <http://www.example.com/template> "Add datatype $y to $x".
+var:sk_78 <http://www.example.com/template> "Remove $x".
+var:sk_105 <http://www.example.com/template> "The relation $x expects an attribute of the datatype $y.".
+var:sk_124 <http://www.example.com/template> "Add datatype $y to $x".
+var:sk_127 <http://www.example.com/template> "Remove $x".
+var:sk_154 <http://www.example.com/template> "The relation $x expects an attribute of the datatype $y.".
+var:sk_173 <http://www.example.com/template> "Add datatype $y to $x".
+var:sk_176 <http://www.example.com/template> "Remove $x".
+var:sk_203 <http://www.example.com/template> "The relation $x expects an attribute of the datatype $y.".
+var:sk_222 <http://www.example.com/template> "Add datatype $y to $x".
+var:sk_225 <http://www.example.com/template> "Remove $x".
+var:sk_252 <http://www.example.com/template> "The relation $x expects an attribute of the datatype $y.".
+var:sk_271 <http://www.example.com/template> "Add datatype $y to $x".
+var:sk_274 <http://www.example.com/template> "Remove $x".
+var:sk_301 <http://www.example.com/template> "The relation $x expects an attribute of the datatype $y.".
+var:sk_320 <http://www.example.com/template> "Add datatype $y to $x".
+var:sk_323 <http://www.example.com/template> "Remove $x".
+var:sk_14 <http://www.example.com/x> <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/GeoCoordinatesMapping/ObjectMap/ParentTriplesMap/SubjectMap>.
+var:sk_35 <http://www.example.com/x> <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/GeoCoordinatesMapping/ObjectMap/ParentTriplesMap/SubjectMap>.
+var:sk_56 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/name>.
+var:sk_75 <http://www.example.com/x> <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/chinesename/FunctionTermMap>.
+var:sk_78 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/name>.
+var:sk_105 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/name>.
+var:sk_124 <http://www.example.com/x> <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/pinyinchinesename/FunctionTermMap>.
+var:sk_127 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/name>.
+var:sk_154 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/name>.
+var:sk_173 <http://www.example.com/x> <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/name/FunctionTermMap>.
+var:sk_176 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/name>.
+var:sk_203 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/name>.
+var:sk_222 <http://www.example.com/x> <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/simpchinesename/FunctionTermMap>.
+var:sk_225 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/name>.
+var:sk_252 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/name>.
+var:sk_271 <http://www.example.com/x> <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/tradchinesename/FunctionTermMap>.
+var:sk_274 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/name>.
+var:sk_301 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/name>.
+var:sk_320 <http://www.example.com/x> <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/jyutpingchinesename/FunctionTermMap>.
+var:sk_323 <http://www.example.com/x> <http://xmlns.com/foaf/0.1/name>.
+var:sk_14 <http://www.example.com/y> geo:SpatialThing.
+var:sk_35 <http://www.example.com/y> geo:SpatialThing.
+var:sk_56 <http://www.example.com/y> rdfs:Literal.
+var:sk_75 <http://www.example.com/y> rdfs:Literal.
+var:sk_105 <http://www.example.com/y> rdfs:Literal.
+var:sk_124 <http://www.example.com/y> rdfs:Literal.
+var:sk_154 <http://www.example.com/y> rdfs:Literal.
+var:sk_173 <http://www.example.com/y> rdfs:Literal.
+var:sk_203 <http://www.example.com/y> rdfs:Literal.
+var:sk_222 <http://www.example.com/y> rdfs:Literal.
+var:sk_252 <http://www.example.com/y> rdfs:Literal.
+var:sk_271 <http://www.example.com/y> rdfs:Literal.
+var:sk_301 <http://www.example.com/y> rdfs:Literal.
+var:sk_320 <http://www.example.com/y> rdfs:Literal.
+var:sk_14 <http://www.example.com/z> geo:long.
+var:sk_35 <http://www.example.com/z> geo:lat.
+var:sk_14 rlog:logLevel rlog:ERROR.
+var:sk_35 rlog:logLevel rlog:ERROR.
+var:sk_56 rlog:logLevel rlog:ERROR.
+var:sk_105 rlog:logLevel rlog:ERROR.
+var:sk_154 rlog:logLevel rlog:ERROR.
+var:sk_203 rlog:logLevel rlog:ERROR.
+var:sk_252 rlog:logLevel rlog:ERROR.
+var:sk_301 rlog:logLevel rlog:ERROR.
+var:sk_14 rlog:hasCode :codeDomain.
+var:sk_35 rlog:hasCode :codeDomain.
+var:sk_56 rlog:hasCode :codeNoDatatype.
+var:sk_105 rlog:hasCode :codeNoDatatype.
+var:sk_154 rlog:hasCode :codeNoDatatype.
+var:sk_203 rlog:hasCode :codeNoDatatype.
+var:sk_252 rlog:hasCode :codeNoDatatype.
+var:sk_301 rlog:hasCode :codeNoDatatype.
+var:sk_14 rlog:resource var:sk_23.
+var:sk_14 rlog:resource var:sk_1.
+var:sk_14 rlog:resource var:sk_28.
+var:sk_35 rlog:resource var:sk_44.
+var:sk_35 rlog:resource var:sk_1.
+var:sk_35 rlog:resource var:sk_49.
+var:sk_56 rlog:resource var:sk_64.
+var:sk_56 rlog:resource var:sk_71.
+var:sk_105 rlog:resource var:sk_113.
+var:sk_105 rlog:resource var:sk_120.
+var:sk_154 rlog:resource var:sk_162.
+var:sk_154 rlog:resource var:sk_169.
+var:sk_203 rlog:resource var:sk_211.
+var:sk_203 rlog:resource var:sk_218.
+var:sk_252 rlog:resource var:sk_260.
+var:sk_252 rlog:resource var:sk_267.
+var:sk_301 rlog:resource var:sk_309.
+var:sk_301 rlog:resource var:sk_316.
+var:sk_23 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/GeoCoordinatesMapping/ObjectMap/ParentTriplesMap/SubjectMap>.
+var:sk_28 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/GeoCoordinatesMapping/ObjectMap/ParentTriplesMap/longitude>.
+var:sk_28 rdf:subject rr:predicate.
+var:sk_44 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/GeoCoordinatesMapping/ObjectMap/ParentTriplesMap/SubjectMap>.
+var:sk_49 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/GeoCoordinatesMapping/ObjectMap/ParentTriplesMap/latitude>.
+var:sk_49 rdf:subject rr:predicate.
+var:sk_64 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/chinesename>.
+var:sk_64 rdf:subject rr:predicate.
+var:sk_71 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/chinesename/FunctionTermMap>.
+var:sk_87 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/chinesename/FunctionTermMap>.
+var:sk_98 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/chinesename>.
+var:sk_113 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/pinyinchinesename>.
+var:sk_113 rdf:subject rr:predicate.
+var:sk_120 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/pinyinchinesename/FunctionTermMap>.
+var:sk_136 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/pinyinchinesename/FunctionTermMap>.
+var:sk_147 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/pinyinchinesename>.
+var:sk_162 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/name>.
+var:sk_162 rdf:subject rr:predicate.
+var:sk_169 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/name/FunctionTermMap>.
+var:sk_185 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/name/FunctionTermMap>.
+var:sk_196 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/name>.
+var:sk_211 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/simpchinesename>.
+var:sk_211 rdf:subject rr:predicate.
+var:sk_218 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/simpchinesename/FunctionTermMap>.
+var:sk_234 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/simpchinesename/FunctionTermMap>.
+var:sk_245 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/simpchinesename>.
+var:sk_260 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/tradchinesename>.
+var:sk_260 rdf:subject rr:predicate.
+var:sk_267 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/tradchinesename/FunctionTermMap>.
+var:sk_283 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/tradchinesename/FunctionTermMap>.
+var:sk_294 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/tradchinesename>.
+var:sk_309 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/jyutpingchinesename>.
+var:sk_309 rdf:subject rr:predicate.
+var:sk_316 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/jyutpingchinesename/FunctionTermMap>.
+var:sk_332 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/jyutpingchinesename/FunctionTermMap>.
+var:sk_343 rdf:subject <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/jyutpingchinesename>.
+var:sk_28 rdf:predicate geo:long.
+var:sk_49 rdf:predicate geo:lat.
+var:sk_64 rdf:predicate rr:predicate.
+var:sk_87 rdf:predicate rr:datatype.
+var:sk_98 rdf:predicate rr:predicate.
+var:sk_113 rdf:predicate rr:predicate.
+var:sk_136 rdf:predicate rr:datatype.
+var:sk_147 rdf:predicate rr:predicate.
+var:sk_162 rdf:predicate rr:predicate.
+var:sk_185 rdf:predicate rr:datatype.
+var:sk_196 rdf:predicate rr:predicate.
+var:sk_211 rdf:predicate rr:predicate.
+var:sk_234 rdf:predicate rr:datatype.
+var:sk_245 rdf:predicate rr:predicate.
+var:sk_260 rdf:predicate rr:predicate.
+var:sk_283 rdf:predicate rr:datatype.
+var:sk_294 rdf:predicate rr:predicate.
+var:sk_309 rdf:predicate rr:predicate.
+var:sk_332 rdf:predicate rr:datatype.
+var:sk_343 rdf:predicate rr:predicate.
+var:sk_64 rdf:object <http://xmlns.com/foaf/0.1/name>.
+var:sk_87 rdf:object rdfs:Literal.
+var:sk_98 rdf:object <http://xmlns.com/foaf/0.1/name>.
+var:sk_113 rdf:object <http://xmlns.com/foaf/0.1/name>.
+var:sk_136 rdf:object rdfs:Literal.
+var:sk_147 rdf:object <http://xmlns.com/foaf/0.1/name>.
+var:sk_162 rdf:object <http://xmlns.com/foaf/0.1/name>.
+var:sk_185 rdf:object rdfs:Literal.
+var:sk_196 rdf:object <http://xmlns.com/foaf/0.1/name>.
+var:sk_211 rdf:object <http://xmlns.com/foaf/0.1/name>.
+var:sk_234 rdf:object rdfs:Literal.
+var:sk_245 rdf:object <http://xmlns.com/foaf/0.1/name>.
+var:sk_260 rdf:object <http://xmlns.com/foaf/0.1/name>.
+var:sk_283 rdf:object rdfs:Literal.
+var:sk_294 rdf:object <http://xmlns.com/foaf/0.1/name>.
+var:sk_309 rdf:object <http://xmlns.com/foaf/0.1/name>.
+var:sk_332 rdf:object rdfs:Literal.
+var:sk_343 rdf:object <http://xmlns.com/foaf/0.1/name>.
+var:sk_56 rut:resultAnnotation var:sk_75.
+var:sk_56 rut:resultAnnotation var:sk_78.
+var:sk_105 rut:resultAnnotation var:sk_124.
+var:sk_105 rut:resultAnnotation var:sk_127.
+var:sk_154 rut:resultAnnotation var:sk_173.
+var:sk_154 rut:resultAnnotation var:sk_176.
+var:sk_203 rut:resultAnnotation var:sk_222.
+var:sk_203 rut:resultAnnotation var:sk_225.
+var:sk_252 rut:resultAnnotation var:sk_271.
+var:sk_252 rut:resultAnnotation var:sk_274.
+var:sk_301 rut:resultAnnotation var:sk_320.
+var:sk_301 rut:resultAnnotation var:sk_323.
+var:sk_75 cs:subjectOfChange <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/chinesename/FunctionTermMap>.
+var:sk_78 cs:subjectOfChange <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/chinesename>.
+var:sk_124 cs:subjectOfChange <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/pinyinchinesename/FunctionTermMap>.
+var:sk_127 cs:subjectOfChange <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/pinyinchinesename>.
+var:sk_173 cs:subjectOfChange <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/name/FunctionTermMap>.
+var:sk_176 cs:subjectOfChange <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/name>.
+var:sk_222 cs:subjectOfChange <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/simpchinesename/FunctionTermMap>.
+var:sk_225 cs:subjectOfChange <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/simpchinesename>.
+var:sk_271 cs:subjectOfChange <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/tradchinesename/FunctionTermMap>.
+var:sk_274 cs:subjectOfChange <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/tradchinesename>.
+var:sk_320 cs:subjectOfChange <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/jyutpingchinesename/FunctionTermMap>.
+var:sk_323 cs:subjectOfChange <http://en.dbpedia.org/resource/Mapping_en:Infobox_artist/SimplePropertyMapping/foaf:name/jyutpingchinesename>.
+var:sk_75 cs:addition var:sk_87.
+var:sk_124 cs:addition var:sk_136.
+var:sk_173 cs:addition var:sk_185.
+var:sk_222 cs:addition var:sk_234.
+var:sk_271 cs:addition var:sk_283.
+var:sk_320 cs:addition var:sk_332.
+var:sk_78 cs:removal var:sk_98.
+var:sk_127 cs:removal var:sk_147.
+var:sk_176 cs:removal var:sk_196.
+var:sk_225 cs:removal var:sk_245.
+var:sk_274 cs:removal var:sk_294.
+var:sk_323 cs:removal var:sk_343.
+
+#ENDS 1.844 [sec] IO=7046/242 TC=1035 TP=3772 BC=0 BP=0 PM=0 CM=0 FM=0 AM=0

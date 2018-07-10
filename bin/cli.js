@@ -58,10 +58,11 @@ if (!program.input) {
             }
           });
         } else {
-          const mapping = fs.readFileSync(program.input, 'utf-8');
-          validate(mapping).then(doAll);
+          const writer = N3.Writer();
+          writer.addTriples(mappingStore.getTriples());
+          writer.end((error, result) => {console.log(result); validate(result).then(doAll)});
         }
-      });
+      }, false);
     }});
 }
 
@@ -143,7 +144,7 @@ function doAll(store) {
 }
 
 function scoresToCSV(scores) {
-  let csv = 'term map,score,number of actions,actions\n';
+  let csv = 'term map,score,inconsistencyScore,possibleAffectedRulesScore,number of actions,actions\n';
 
   for (let i = 0; i < scores.length; i ++) {
     const score = scores[i];
@@ -152,7 +153,7 @@ function scoresToCSV(scores) {
       return score.actions.indexOf(item) === pos;
     });
 
-    csv += `${score.termMap},${score.harmonic},${score.actions.length},${temp}\n`;
+    csv += `${score.termMap},${score.arithmetic},${score.inconsistencyScore},${score.possibleAffectedRulesScore},${score.actions.length},${temp}\n`;
   }
 
   return csv;

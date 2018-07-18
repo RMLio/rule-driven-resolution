@@ -15,3 +15,6 @@ Details about all options can be found via `resolution -h`.
 
 ## Author
 Pieter Heyvaert
+
+## License
+This code is copyrighted by [Ghent University – imec](http://idlab.ugent.be/) and released under the [MIT license](http://opensource.org/licenses/MIT).

@@ -12,6 +12,7 @@ const normalizeRML = require('normalize-rml').normalizeRml;
 const validate = require('../lib/validate');
 const ViolationAnalyzer = require('../lib/violationanalyzer.js');
 const EffectsAnalyzer = require('../lib/effectsanalyzer.js');
+const Clusterer = require('../lib/cluster.js');
 const N3 = require('n3');
 const Scorer = require('../lib/scorer.js');
 
@@ -54,16 +55,69 @@ if (!program.input) {
               inconsistenciesStore.addTriple(triple.subject, triple.predicate, triple.object);
             } else {
               console.log('all inconsistency triples in their store');
-              doAll(inconsistenciesStore);
+              doAllClustersAndOntologyDefinitions(inconsistenciesStore);
             }
           });
         } else {
           const writer = N3.Writer();
           writer.addTriples(mappingStore.getTriples());
-          writer.end((error, result) => {console.log(result); validate(result).then(doAll)});
+          writer.end((error, result) => {console.log(result); validate(result).then(doAllClustersAndOntologyDefinitions)});
         }
       }, false);
     }});
+}
+
+function doAllClustersAndOntologyDefinitions(store) {
+  const violationAnalyzer = new ViolationAnalyzer(store, mappingStore);
+  const analyzedViolations = violationAnalyzer.analyze(true);
+  const inconsistencies = [];
+  const rules = [];
+  const definitions = [];
+
+  analyzedViolations.forEach(violation => {
+    const inconsistency = {
+      inconsistency: violation.inconsistency,
+      rules: [],
+      ontologyDefinitions: violation.involvedOntologyDefinitions
+    };
+
+    violation.involvedOntologyDefinitions.forEach(d => {
+      if (definitions.indexOf(d) === -1) {
+        definitions.push(d);
+      }
+    });
+
+    violation.possibleActions.forEach(action => {
+      inconsistency.rules.push(action.termMap);
+
+      if (rules.indexOf(action.termMap) === -1) {
+        rules.push(action.termMap);
+      }
+    });
+
+    inconsistencies.push(inconsistency);
+  });
+
+  const clusterer = new Clusterer(mappingStore);
+  const scorer = new Scorer(mappingStore, inconsistencies);
+
+  const clusters = clusterer.getClusters(rules);
+
+  clusters.forEach(cluster => {
+    cluster.score = scorer.getClusterScore(cluster);
+  });
+
+  console.log(`# inconsistencies = ${inconsistencies.length}`);
+  console.log(clustersToCSV(clusters));
+
+  const temp = [];
+
+  definitions.forEach(definition => {
+    const score = scorer.getOntologyDefinitionScore(definition);
+    temp.push({definition, score});
+  });
+
+  console.log(definitionsToCSV(temp));
 }
 
 function doAll(store) {
@@ -155,6 +209,26 @@ function scoresToCSV(scores) {
 
     csv += `${score.termMap},${score.arithmetic},${score.inconsistencyScore},${score.possibleAffectedRulesScore},${score.actions.length},${temp}\n`;
   }
+
+  return csv;
+}
+
+function clustersToCSV(clusters) {
+  let csv = 'triplesmap,size,score\n';
+
+  clusters.forEach(cluster => {
+    csv += `${cluster.tm},${cluster.rules.length},${cluster.score}\n`;
+  });
+
+  return csv;
+}
+
+function definitionsToCSV(definitions) {
+  let csv = 'definition,size,score\n';
+
+  definitions.forEach(d => {
+    csv += `${d.definition},${d.score}\n`;
+  });
 
   return csv;
 }

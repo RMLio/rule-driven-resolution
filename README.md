@@ -1,8 +1,6 @@
 # Resolution
 
-A Node.js module that offers two core features:
-1. determine the possible actions to resolve errors in RML mapping rules
-2. determine the effects of updating a Term Map
+A Node.js module that offers determines the rules and ontology definitions that need to be inspected to resolve inconsistencies.
 
 ## Usage
 

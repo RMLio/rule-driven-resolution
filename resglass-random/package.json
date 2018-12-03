@@ -1,0 +1,14 @@
+{
+  "name": "ressglass-random",
+  "version": "0.0.1",
+  "description": "Random ranking generation and comparison with Resglass",
+  "main": "random.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pieter Heyvaert <pheyvaer.heyvaert@ugent.be>",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parse": "^4.0.1"
+  }
+}

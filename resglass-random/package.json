@@ -9,6 +9,6 @@
   "author": "Pieter Heyvaert <pheyvaer.heyvaert@ugent.be>",
   "license": "MIT",
   "dependencies": {
-    "csv-parse": "^4.0.1"
+    "csv-parse": "^4.4.6"
   }
 }

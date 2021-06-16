@@ -9,11 +9,11 @@
   "author": "Pieter Heyvaert <pheyvaer.heyvaert@ugent.be>",
   "license": "UNLICENSED",
   "dependencies": {
+    "@rmlio/yarrrml-parser": "^1.2.3",
     "chai": "^4.1.2",
     "commander": "^2.11.0",
     "mocha": "^4.0.1",
     "n3": "^0.11.0",
-    "normalize-rml": "git+ssh://git@git.datasciencelab.ugent.be:4444/rml/normalize-rml.git",
     "pkginfo": "^0.4.1",
     "prefix-ns": "^0.1.2",
     "q": "^1.5.0",
